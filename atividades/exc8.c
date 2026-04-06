@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    
+    int total_eleitores, votos_brancos, votos_nulos, votos_validos;
+    float p_brancos, p_nulos, p_validos;
+
+    printf("Digite o total de eleitores: ");
+    scanf("%d", &total_eleitores);
+    printf("Digite os votos brancos, nulos e validos: ");
+    scanf("%d %d %d", &votos_brancos, &votos_nulos, &votos_validos);
+
+    p_brancos = (votos_brancos / total_eleitores) * 100; 
+    p_nulos = (votos_nulos * 100.0) / total_eleitores;
+    p_validos = (votos_validos * 100.0) / total_eleitores;
+
+    printf("Brancos: %.2f%%, Nulos: %.2f%%, Validos: %.2f%%\n", p_brancos, p_nulos, p_validos);
+    return 0;
+}
